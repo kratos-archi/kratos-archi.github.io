@@ -6,6 +6,7 @@ declare const Isotope: any;
 declare const Waypoint: any;
 declare const GLightbox: any;
 declare var $: any;
+declare var introJs: any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -46,6 +47,10 @@ export class AppComponent  implements OnInit {
   };
 
   ngOnInit(): void {
+    const intro = introJs();
+// Initialize steps
+// Start tutorial
+//     intro.start();
     /**
      * Counter
      */
@@ -205,32 +210,6 @@ export class AppComponent  implements OnInit {
     /**
      * Porfolio isotope and filter
      */
-    window.addEventListener('load', () => {
-      const portfolioContainer = select('.portfolio-container');
-      if (portfolioContainer) {
-        const portfolioIsotope = new Isotope(portfolioContainer, {
-          itemSelector: '.portfolio-item'
-        });
-
-        const portfolioFilters = select('#portfolio-flters li', true);
-
-        on('click', '#portfolio-flters li', function(e) {
-          e.preventDefault();
-          portfolioFilters.forEach(function(el) {
-            el.classList.remove('filter-active');
-          });
-          this.classList.add('filter-active');
-
-          portfolioIsotope.arrange({
-            filter: this.getAttribute('data-filter')
-          });
-          portfolioIsotope.on('arrangeComplete', function() {
-            AOS.refresh();
-          });
-        }, true);
-      }
-
-    });
 
     /**
      * Initiate portfolio lightbox

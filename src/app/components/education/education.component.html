@@ -1,1 +1,13 @@
-<p>education works!</p>
+<h3 class="resume-title">Education</h3>
+<div class="resume-item pb-0" *ngFor="let educ of education">
+  <h4>{{ educ?.speciality}} </h4>
+  <h5><i class="fa fa-graduation-cap"></i> {{ educ?.description}}</h5>
+  <span class="m-2"></span>
+
+  <h5><i class="fa fa-calendar"></i> {{ educ?.start_date | date: 'yyyy/MM/dd'}} -
+    <span *ngIf="educ?.end_date != 'Present'">{{ educ?.end_date | date: 'yyyy/MM/dd'}}</span>
+    <span *ngIf="educ?.end_date === 'Present'">{{ educ?.end_date }}</span>
+  </h5>
+  <br/>
+  <h5><i class="fa fa-map-marker"></i> <em> {{ educ?.address}} </em></h5>
+</div>

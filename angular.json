@@ -29,11 +29,14 @@
             ],
             "styles": [
               "src/assets/vendor/aos/aos.css",
+              "node_modules/font-awesome/css/font-awesome.css",
               "src/assets/vendor/bootstrap/css/bootstrap.min.css",
               "src/assets/vendor/bootstrap-icons/bootstrap-icons.css",
               "src/assets/vendor/boxicons/css/boxicons.min.css",
               "src/assets/vendor/glightbox/css/glightbox.min.css",
               "node_modules/swiper/swiper-bundle.css",
+              "node_modules/intro.js/minified/introjs.min.css",
+              "node_modules/sweetalert2/dist/sweetalert2.min.css",
               "src/assets/css/style.css",
               "src/styles.scss"
             ],
@@ -46,7 +49,9 @@
               "src/assets/vendor/isotope-layout/isotope.pkgd.min.js",
               "src/assets/vendor/swiper/swiper-bundle.min.js",
               "src/assets/vendor/typed.js/typed.min.js",
-              "src/assets/vendor/waypoints/noframework.waypoints.js"
+              "src/assets/vendor/waypoints/noframework.waypoints.js",
+              "node_modules/intro.js/minified/intro.min.js",
+              "node_modules/sweetalert2/dist/sweetalert2.min.js"
             ]
           },
           "configurations": {

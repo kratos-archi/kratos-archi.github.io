@@ -20,6 +20,9 @@ import { CustomContainerComponent } from './components/shared/custom-container/c
 import { SkillsCardComponent } from './components/skills-card/skills-card.component';
 import { ServicesComponent } from './components/services/services.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {ProgressBarModule} from 'angular-progress-bar';
 
 @NgModule({
   declarations: [
@@ -44,10 +47,13 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
   ],
   imports: [
     BrowserModule,
-    NgxUsefulSwiperModule
-
+    HttpClientModule,
+    NgxUsefulSwiperModule,
+    FormsModule,
+    ProgressBarModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

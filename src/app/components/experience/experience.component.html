@@ -1,1 +1,20 @@
-<p>experience works!</p>
+<h3 class="resume-title">Professional Experience</h3>
+<div *ngFor="let experience of experiences" class="resume-item">
+  <h4>{{ experience?.role}}  <i *ngIf="experience?.remote" class="text-secondary p-2">- Remotely</i></h4>
+  <h5><i class="fa fa-briefcase"></i> {{ experience?.employer}}</h5>
+  <br/>
+
+  <h5><i class="fa fa-calendar"></i> {{ experience?.start_date | date: 'yyyy/MM/dd'}} -
+    <span *ngIf="experience?.end_date != 'Present'">{{ experience?.end_date | date: 'yyyy/MM/dd'}}</span>
+    <span *ngIf="experience?.end_date === 'Present'">{{ experience?.end_date }}</span>
+  </h5>
+    <span class="m-2"></span>
+  <h5><i class="fa fa-map-marker"></i> <em> {{ experience?.address}} </em></h5>
+  <ul>
+    <ng-template ngFor let-task [ngForOf]="experience.description.split('\\item')">
+
+      <li *ngIf="task">{{task}}</li>
+    </ng-template>
+  </ul>
+</div>
+
