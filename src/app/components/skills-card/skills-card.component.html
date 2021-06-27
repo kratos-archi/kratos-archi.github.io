@@ -3,35 +3,36 @@
 
     <div class="section-title">
       <h2>Portfolio</h2>
-      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-    </div>
+      <p></p></div>
 
     <div class="row" data-aos="fade-up">
       <div class="col-lg-12 d-flex justify-content-center">
         <ul id="portfolio-flters">
-          <li data-filter="*" class="filter-active" [ngClass]="selectedCategory == '' ? 'filter-active' : ''" (click)="getSelectedSkillsByCategory('')">All</li>
-          <li  data-filter=".filter-{{category.name.split(' ').join('-')}}" *ngFor="let category of categories" (click)="getSelectedSkillsByCategory(category.name)"
-               [ngClass]="selectedCategory == category.name ? 'filter-active' : ''" >
+          <li data-filter="*" class="filter-active" [ngClass]="selectedCategory == '' ? 'filter-active' : ''"
+              (click)="getSelectedSkillsByCategory('')">All
+          </li>
+          <li data-filter=".filter-{{category.name.split(' ').join('-')}}" *ngFor="let category of categories"
+              (click)="getSelectedSkillsByCategory(category.name)"
+              [ngClass]="selectedCategory == category.name ? 'filter-active' : ''">
             {{category.name}}
           </li>
         </ul>
       </div>
     </div>
 
-    <div class="row portfolio-container"  data-aos="fade-up" data-aos-delay="100">
+    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
-      <div  *ngFor="let skill of skills" class="col-lg-4 col-md-6 portfolio-item filter-{{skill.category.name.split(' ').join('-')}}">
+      <div *ngFor="let skill of skills"
+           class="col-lg-3 col-md-4 portfolio-item filter-{{skill.category.name.split(' ').join('-')}}">
         <div class="portfolio-wrap">
-          <img src="{{skill?.image}}" class="img-fluid" style="max-height: 250px" alt="">
+          <img src="{{skill?.image}}" class="img-fluid" style="height: 150px" alt="">
           <div class="portfolio-links">
-            <a href="{{skill?.image}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{skill.name}}"><i class="bx bx-plus"></i></a>
-            <a href="" title="More Details"><i class="bx bx-link"></i></a>
+            <a  data-gallery="portfolioGallery" class="portfolio-lightbox"
+               title="{{skill.name}}"><i class="bx bx-plus"></i></a>
+            <a  title="More Details"><i class="bx bx-link"></i></a>
           </div>
         </div>
       </div>
-
-
-
 
 
     </div>

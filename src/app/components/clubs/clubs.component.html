@@ -3,24 +3,27 @@
 
     <div class="section-title">
       <h2>Clubs</h2>
-      <p>During my journey i joined and worked with many clubs & associations to improve myself both socially and technically.</p>
+      <p>During my journey i joined and worked with many clubs & associations to improve myself both socially and
+        technically.</p>
     </div>
 
     <div class="row no-gutters">
 
 
-
       <div class="col-lg-6 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100"
            *ngFor="let club of clubs">
         <div class="count-box">
-          <img class="img-fluid m-auto" src="{{ club?.logo }}" style="height: 250px;">
+          <img class="img-fluid" src="{{ club?.logo }}" style="height: 150px; display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;">
           <h2 class="text-center">{{ club?.name }}</h2>
           <br/>
-          <hr/>
-          <h5>{{ club?.start_date | date: 'yyyy/MM/dd'}} -
+          <h5 class="text-center">{{ club?.start_date | date: 'yyyy/MM/dd'}} -
             <span *ngIf="club?.end_date != 'Present'">{{ club?.end_date | date: 'yyyy/MM/dd'}}</span>
             <span *ngIf="club?.end_date === 'Present'">{{ club?.end_date }}</span>
           </h5>
+          <hr/>
         </div>
       </div>
 

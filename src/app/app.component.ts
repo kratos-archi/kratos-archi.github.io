@@ -48,13 +48,67 @@ export class AppComponent  implements OnInit {
 
   ngOnInit(): void {
     const intro = introJs();
+    if ( localStorage.getItem('first-time') === null) {
+      intro.setOptions({
+        showProgress: true,
+        position: 'left',
+        showBullets: false,
+
+        steps: [{
+          title: 'Welcome',
+          intro: 'First time you visit my portfolio , Hi 👋 !'
+        },
+          {
+            title: 'Who am i ?',
+            element: document.querySelector('#home-step'),
+            intro: 'This step focuses on an image'
+          },
+          {
+            title: 'About Me!',
+            element: document.querySelector('#about-step'),
+            intro: 'And this is our final step!',
+          },
+          {
+            title: 'My Skills',
+            element: document.querySelector('#skills-step'),
+            intro: 'And this is our final step!',
+            position: 'bo',
+          },
+          {
+            title: 'My Professional Experiences',
+            element: document.querySelector('#experience-step'),
+            intro: 'And this is our final step!',
+          },
+          {
+            title: 'My Education',
+            element: document.querySelector('#education-step'),
+            intro: 'And this is our final step!',
+          },
+          {
+            title: 'My Projects',
+            element: document.querySelector('#projects-step'),
+            intro: 'And this is our final step!',
+          },
+          {
+            title: 'Testimonials',
+            element: document.querySelector('#testimonials-step'),
+            intro: 'And this is our final step!',
+          },
+          {
+            title: 'Feel free to contact me ! ',
+            element: document.querySelector('#contact-step'),
+            intro: 'And this is our final step!',
+          }
+
+        ]
+      }).start();
+      localStorage.setItem('first-time', 'false');
+    }
 // Initialize steps
 // Start tutorial
-//     intro.start();
     /**
      * Counter
      */
-    // $('.counter').counterUp();
 
     /**
      * Easy selector helper function

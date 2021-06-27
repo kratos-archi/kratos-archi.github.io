@@ -9,16 +9,23 @@ import {ApiService} from '../../services/api.service';
 export class SidenavComponent implements OnInit {
 
   socials: any = null;
+  about: any = null;
 
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.getSocial();
+    this.getAbout();
   }
 
   getSocial(): void {
     this.apiService.getSocial().subscribe(data => {
       this.socials = data;
+    });
+  }
+  getAbout(): void {
+    this.apiService.getAbout().subscribe(data => {
+      this.about = data[0];
     });
   }
 }

@@ -4,12 +4,12 @@
 <!-- ======= Header ======= -->
 <header id="header">
   <div class="d-flex flex-column">
-
     <div class="profile">
       <img src="assets/img/profile-img-2.jpg" alt="" class="img-fluid rounded-circle">
       <h1 class="text-light" ><a>Moez Saidi</a></h1>
       <div class="social-links mt-3 text-center">
         <a href="{{social?.link}}" target="_blank"  *ngFor="let social of socials"><i class="bx {{social?.logo}}"></i></a>
+        <a href="{{about?.cv}}" download="{{about?.name}}.pdf"><i class="bx bxs-file-doc"></i></a>
       </div>
     </div>
 
@@ -19,7 +19,7 @@
         <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
         <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
         <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-        <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
+        <li><a href="#projects" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Projects</span></a></li>
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
       </ul>
     </nav><!-- .nav-menu -->

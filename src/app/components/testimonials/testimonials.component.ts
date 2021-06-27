@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {ApiService} from '../../services/api.service';
 
 @Component({
   selector: 'app-testimonials',
@@ -7,9 +8,18 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class TestimonialsComponent implements OnInit {
   @Input() config;
-  constructor() { }
+  testimonials: any = null;
+
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.getTestimonials();
+  }
+
+  getTestimonials(): void {
+    this.apiService.getTestimonials().subscribe(data => {
+      this.testimonials = data;
+    });
   }
 
 }
