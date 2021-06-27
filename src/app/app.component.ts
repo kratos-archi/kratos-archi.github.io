@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {SwiperOptions} from 'swiper';
 import * as AOS from 'aos';
 import Typed from 'typed.js';
+import Swiper from 'swiper';
 declare const Isotope: any;
 declare const Waypoint: any;
 declare const GLightbox: any;
@@ -14,42 +14,11 @@ declare var introJs: any;
 })
 export class AppComponent  implements OnInit {
   title = 'Moez Saidi';
-  config: SwiperOptions = {
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-    spaceBetween: 30,
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
-    }
-
-  };
 
   ngOnInit(): void {
     const intro = introJs();
     if ( localStorage.getItem('first-time') === null) {
-      intro.setOptions({
+      intro.setOptions( {
         showProgress: true,
         position: 'left',
         showBullets: false,
@@ -61,38 +30,37 @@ export class AppComponent  implements OnInit {
           {
             title: 'Who am i ?',
             element: document.querySelector('#home-step'),
-            intro: 'This step focuses on an image'
+            intro: 'I am currently a student , passionate about cloud .'
           },
           {
             title: 'About Me!',
             element: document.querySelector('#about-step'),
-            intro: 'And this is our final step!',
+            intro: 'Here you can find some information about me .',
           },
           {
             title: 'My Skills',
             element: document.querySelector('#skills-step'),
-            intro: 'And this is our final step!',
-            position: 'bo',
+            intro: 'I worked so hard to obtain such skills and aiming to get even more .',
           },
           {
             title: 'My Professional Experiences',
             element: document.querySelector('#experience-step'),
-            intro: 'And this is our final step!',
+            intro: 'I realized that working while studying is very interesting to apply what i learn in really world project .',
           },
           {
             title: 'My Education',
             element: document.querySelector('#education-step'),
-            intro: 'And this is our final step!',
+            intro: 'I just studied in one university after my Bachelor degree .',
           },
           {
             title: 'My Projects',
             element: document.querySelector('#projects-step'),
-            intro: 'And this is our final step!',
+            intro: 'Here is some of my project , just for fun .',
           },
           {
             title: 'Testimonials',
             element: document.querySelector('#testimonials-step'),
-            intro: 'And this is our final step!',
+            intro: 'Those are my precious employers that i have been working with , they made me who i am right now .',
           },
           {
             title: 'Feel free to contact me ! ',
@@ -284,5 +252,49 @@ export class AppComponent  implements OnInit {
         mirror: false
       });
     });
+
+    new Swiper('.portfolio-details-slider', {
+      speed: 400,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      }
+    });
+
+    /**
+     * Testimonials slider
+     */
+    new Swiper('.testimonials-slider', {
+      speed: 600,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      slidesPerView: 'auto',
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        }
+      }
+    });
+
   }
 }

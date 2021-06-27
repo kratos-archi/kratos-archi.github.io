@@ -5,7 +5,7 @@
 <header id="header">
   <div class="d-flex flex-column">
     <div class="profile">
-      <img src="assets/img/profile-img-2.jpg" alt="" class="img-fluid rounded-circle">
+      <img src="{{about?.profile_image}}" alt="" class="img-fluid rounded-circle">
       <h1 class="text-light" ><a>Moez Saidi</a></h1>
       <div class="social-links mt-3 text-center">
         <a href="{{social?.link}}" target="_blank"  *ngFor="let social of socials"><i class="bx {{social?.logo}}"></i></a>

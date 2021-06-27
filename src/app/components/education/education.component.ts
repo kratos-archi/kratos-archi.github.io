@@ -8,14 +8,31 @@ import {ApiService} from '../../services/api.service';
 })
 export class EducationComponent implements OnInit {
 
-  education: any[];
+  education: any[] = [
+    {
+      id: 1,
+      start_date: '2017-09-01',
+      end_date: '2022-06-01',
+      description: 'INSAT',
+      speciality: 'Engineer in Computer Networks and Telecommunications',
+      address: 'Urban Center, Tunisia'
+    },
+    {
+      id: 2,
+      start_date: '2016-09-15',
+      end_date: '2017-06-01',
+      description: 'High School Ibn Abi Dhief',
+      speciality: 'Baccalaureate « Experimental Science » with Honors',
+      address: 'Manouba, Tunisia'
+    }
+  ];
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.getExperiences();
+    // this.getEducation();
   }
 
-  getExperiences(): void {
+  getEducation(): void {
     this.apiService.getEducation().subscribe(data => {
         this.education = data;
       },

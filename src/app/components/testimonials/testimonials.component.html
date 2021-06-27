@@ -5,27 +5,70 @@
       <h2>Testimonials</h2>
       <p></p>
     </div>
-    <swiper [config]="config" class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+<!--    <swiper [config]="configuration" class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">-->
+<!--      <div class="swiper-wrapper">-->
+<!--        <div *ngFor="let testimonial of testimonials " class="swiper-slide">-->
+<!--          <div class="testimonial-item">-->
+<!--            <p>-->
+<!--              <i class="bx bxs-quote-alt-left quote-icon-left"></i>-->
+<!--              {{ testimonial?.quote }}-->
+<!--              <i class="bx bxs-quote-alt-right quote-icon-right"></i>-->
+<!--            </p>-->
+<!--            <img alt="{{testimonial?.name}}" class="testimonial-img" src="{{ testimonial?.image }}">-->
+<!--            <h3>{{ testimonial?.name }}</h3>-->
+<!--            <h4>{{ testimonial?.role }}</h4>-->
+<!--          </div>-->
+<!--        </div>&lt;!&ndash; End testimonial item &ndash;&gt;-->
+
+
+<!--      </div>-->
+<!--      <div class="swiper-pagination"></div>-->
+<!--    </swiper>-->
+    <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
       <div class="swiper-wrapper">
 
-
-        <div *ngFor="let testimonial of testimonials " class="swiper-slide">
-          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-slide">
+          <div class="testimonial-item" data-aos="fade-up">
             <p>
               <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              {{ testimonial?.quote }}
               <i class="bx bxs-quote-alt-right quote-icon-right"></i>
             </p>
-            <img alt="{{testimonial?.name}}" class="testimonial-img" src="{{ testimonial?.image }}">
-            <h3>{{ testimonial?.name }}</h3>
-            <h4>{{ testimonial?.role }}</h4>
+            <img src="/assets/img/media/testimonial/efdf845b-ad49-4252-afba-7730f60fb7c1.jpg" class="testimonial-img" alt="">
+            <h3>Rami Hachicha</h3>
+            <h4>President at Tounes Lina</h4>
           </div>
-        </div><!-- End testimonial item -->
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial-item" data-aos="fade-up">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="/assets/img/media/testimonial/875549b0-5408-4832-87f3-47571eac38a4.jpg" class="testimonial-img" alt="">
+            <h3>Ahmed Jamoussi</h3>
+            <h4>CEO at EVENTIZER ( Vayetek )</h4>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial-item" data-aos="fade-up">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="/assets/img/media/testimonial/6744a7e6-3d57-4c41-97f4-48a2ce94eeae.png" class="testimonial-img" alt="">
+            <h3>Hajer Trabelsi</h3>
+            <h4>CEO at Voguel Consulting</h4>
+          </div>
+        </div>
+
+        <!-- End testimonial item -->
 
 
       </div>
       <div class="swiper-pagination"></div>
-    </swiper>
+    </div>
 
   </div>
 </section><!-- End Testimonials Section -->
