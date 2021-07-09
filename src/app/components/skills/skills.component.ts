@@ -189,19 +189,23 @@ export class SkillsComponent implements OnInit {
   categories: any[] = [
       {
         id: 1,
-        name: 'Framework'
+        name: 'Framework',
+        css: 'skills-framework'
       },
       {
         id: 2,
-        name: 'Programming Language'
+        name: 'Programming Language',
+        css: 'skills-pl'
       },
       {
         id: 3,
-        name: 'Database'
+        name: 'Database',
+        css: 'skills-db'
       },
       {
         id: 4,
-        name: 'Cloud - Others'
+        name: 'Cloud - Others',
+        css: 'skills-cloud'
       }
     ];
   constructor(private apiService: ApiService) { }

@@ -1,20 +1,20 @@
 <section id="skills" class="skills section-bg">
   <div class="container">
 
-    <div class="section-title">
+    <div class="section-title"  id="skills-step">
       <h2>Skills</h2>
       <p>I acquired a lot of  skills during my internships , which made my polyvalent as a Software engineer.</p>
     </div>
 
     <div class="row skills-content">
 
-      <div class="col-lg-6" data-aos="fade-up" *ngFor="let category of categories">
+      <div class="col-lg-6"  data-aos-delay="100" data-aos="fade-in" *ngFor="let category of categories" id="{{category.css}}">
         <h2>{{ category?.name }}</h2>
         <ng-template ngFor let-skill [ngForOf]="skills" >
           <div class="progress" *ngIf="skill.category.name == category.name ">
             <span class="skill">{{ skill?.name }}</span>
             <div class="">
-              <progress-bar [progress]="skill?.knowledge" [color]="'#488aff'">
+              <progress-bar [progress]="skill?.knowledge" [color]="'#601313'">
               </progress-bar>
             </div>
           </div>

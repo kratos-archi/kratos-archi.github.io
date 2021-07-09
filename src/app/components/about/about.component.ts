@@ -15,7 +15,7 @@ export class AboutComponent implements OnInit {
     profile_background: '/assets/img/media/about/acd8bd91-e90a-49e7-a598-d913af1d6987.jpg',
     cv: '/assets/img/media/about/3cdb2154-7b13-40ad-b085-fabc24fe2b90.pdf',
     age: '1998-01-01',
-    website: 'https://master.d463nqrat69rs.amplifyapp.com/',
+    website: 'http://moezsaidi.me/',
     phone: '+216 26992291',
     degree: 'IT Engineer',
     email: 'saidi.moez.2014@gmail.com',

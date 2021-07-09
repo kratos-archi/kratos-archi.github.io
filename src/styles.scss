@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+ .introjs-tooltip-title {
+  color: #030303;
+}
+ .introjs-tooltip-header {
+  border: 1px solid #E2E2E2;
+  background-color: #F8F7F7;
+  padding-bottom: 7px;
+}
+ .introjs-tooltip-text {
+  height: 46px;
+  width: 423px;
+  color: #030303;
+  font-size: 16px;
+  letter-spacing: 0.03px;
+  line-height: 24px;
+}
+ .introjs-button {
+  border :none;
+  text-shadow :none;
+  background-color : white;
+}
+ .introjs-nextbutton {
+  background: #040B14 !important;
+  border: 1px solid #040B14;
+  color: white !important;
+  font-weight: bold;
+}
+.introjs-nextbutton:hover {
+  background: #040B14 !important;
+  border: 1px solid #040B14;
+  color: white;
+  font-weight: bold;
+}
+
+ .introjs-progressbar {
+  background: #601313;
+}
+ .introjs-prevbutton {
+  background: #601313 !important;
+  border: 1px solid #601313;
+  color: white !important;
+  font-weight: bold;
+}
+
+
+.introjs-prevbutton:hover {
+  background: #601313 !important;
+  border: 1px solid #601313;
+  color: white !important;
+  font-weight: bold;
+}
+
+.introjs-disabled {
+  display: none;
+}
+.introjs-tooltip {
+  max-width: 500px;
+  min-width: 450px;
+}
+@media (max-width: 600px) {
+  .introjs-tooltip {
+    max-width: 400px;
+    min-width: 355px;
+  }}
