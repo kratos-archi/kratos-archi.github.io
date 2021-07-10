@@ -45,7 +45,11 @@ export class TestimonialsComponent implements OnInit {
       name: 'Rami Hachicha',
       image: '/assets/img/media/testimonial/efdf845b-ad49-4252-afba-7730f60fb7c1.jpg',
       role: 'President at Tounes Lina',
-      quote: ''
+      quote: '<b>Moez Saidi</b> made <b>excellent, impactful</b> contributions to our Backend\n' +
+        'project in <a href="https://www.elbaladiya.tn/" target="_blank"><b>elBaladiya.tn</b></a>.' +
+        '<br\> He was since 2020 a <b>great</b> Addition to our ' +
+        'team, and made proof of both <b>proficiency</b> and <b>professionalism</b>.<br\>' +
+        'Working together was always a <b>pleasurable</b> experience.'
     },
     {
       id: 2,
